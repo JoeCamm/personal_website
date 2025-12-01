@@ -1,3 +1,29 @@
+// Skills database with icons
+const skills = {
+    python: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    pytorch: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg',
+    matlab: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg',
+    sql: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+    docker: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+    git: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    kubernetes: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg',
+    opengl: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opengl/opengl-original.svg',
+    tensorflow: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg'
+};
+
+// Generate skill icons from data attributes
+document.querySelectorAll('.project-skills').forEach(container => {
+    const skillNames = container.dataset.skills.split(',');
+    
+    skillNames.forEach(skillName => {
+        const img = document.createElement('img');
+        img.src = skills[skillName.trim()];
+        img.alt = skillName;
+        img.title = skillName.charAt(0).toUpperCase() + skillName.slice(1);
+        container.appendChild(img);
+    });
+});
+
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

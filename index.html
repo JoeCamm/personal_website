@@ -6,15 +6,14 @@
     <title>Joe Cammarata - ML Engineer & Creator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+
+<body data-theme="professional">
     <!-- Simple Navigation -->
     <nav class="nav">
         <div class="nav-container">
             <a href="#" class="nav-logo">joe cammarata</a>
             <div class="nav-links">
-                <a href="#projects">Projects</a>
-                <a href="#writing">Writing</a>
-                <a href="#about">About Me</a>
+                <a href="#about">Personal</a>
             </div>
         </div>
     </nav>
@@ -24,75 +23,74 @@
         <div class="container-full">
             <!-- Left Sidebar: Intro -->
             <aside class="sidebar">
-                <h1 class="name">Joseph Cammarata</h1>
                 <p class="subtitle">This site is part portfolio, part personal space. A home for what I'm building, learning, and the things I'm figuring out.</p>
                 
                 <div class="skills-section">
                     <h3 class="skills-title">Skills</h3>
-                    <ul class="skills-list">
-                        <li>Python</li>
-                        <li>PyTorch</li>
-                        <li>Computer Vision</li>
-                        <li>Image Segmentation</li>
-                        <li>Remote Work</li>
-                    </ul>
+                    <div class="charms-grid">
+                        <div class="charm" data-tooltip="Python">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                        </div>
+                        <div class="charm" data-tooltip="PyTorch">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch">
+                        </div>
+                        <div class="charm" data-tooltip="MATLAB">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="MATLAB">
+                        </div>
+                        <div class="charm" data-tooltip="SQL">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">
+                        </div>
+                        <div class="charm" data-tooltip="Docker">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                        </div>
+                        <div class="charm" data-tooltip="Git">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                        </div>
+                    </div>
                 </div>
             </aside>
 
             <!-- Right Content: Projects -->
             <main class="main-content">
-                <div class="container">
-                    <h2 class="section-title">Projects</h2>
-                    <p class="section-intro">A selection of things I've built.</p>
-                    
-                    <div class="projects-grid">
-                        <!-- Project 1 -->
-                        <article class="project-card">
-                            <div class="project-header">
-                                <h3>Nuclear Waste Inspection System</h3>
-                                <div class="project-tags">
-                                    <span class="tag">Semantic Segmentation</span>
-                                    <span class="tag">DOE Funded</span>
-                                </div>
-                            </div>
-                            <p class="project-description">
-                                ML-powered inspection system for nuclear waste containers. Detects structural cracks in image data using custom segmentation models.
-                            </p>
-                            <div class="project-links">
-                                <span class="project-status">🔒 Proprietary</span>
-                            </div>
-                        </article>
+                <h2 class="section-title">Projects</h2>
+                <p class="section-intro">A selection of things I've built.</p>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <h3>Nuclear Waste Crack Detection</h3>
+                        <div class="project-skills", data-skills="matlab"></div>
+                        <p class="project-description">
+                            Semantic segmentation model that detects structural cracks in nuclear waste containers.
+                        </p>
+                        <div class="project-links">
+                            <span class="project-status">🔒 Proprietary</span>
+                        </div>
+                    </article>
 
-                        <!-- Project 2 -->
-                        <article class="project-card">
-                            <div class="project-header">
-                                <h3>Kaggle MABE Competition</h3>
-                                <div class="project-tags">
-                                    <span class="tag">Competition</span>
-                                    <span class="tag">In Progress</span>
-                                </div>
-                            </div>
-                            <p class="project-description">
-                                Currently competing in Kaggle's MABE (Mouse Behavior) challenge. Building models to predict mouse behavior from video data. Still climbing the leaderboard.
-                            </p>
-                            <div class="project-links">
-                                <a href="#" class="project-link">View on Kaggle →</a>
-                            </div>
-                        </article>
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <h3>Kaggle MABE Competition</h3>
+                        <div class="project-skills", data-skills="python,pytorch,tensorflow,opengl"></div>
+                        <p class="project-description">
+                            Currently competing in Kaggle's MABE (Mouse Behavior) challenge. Building models to predict mouse behavior from video data. Still climbing the leaderboard.
+                        </p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View on Kaggle →</a>
+                        </div>
+                    </article>
 
-                        <!-- Project 3 - Placeholder -->
-                        <article class="project-card">
-                            <div class="project-header">
-                                <h3>Anthony Fantano's Weekly Track Roundup</h3>
-                                <div class="project-tags">
-                                    <span class="tag">Railway</span>
-                                </div>
-                            </div>
-                            <p class="project-description">
-                                A script that scrapes the comment sectino of Anthony Fantano's weekly track roundup videos and add's them to a youtubeMusic playlist for me to enjoy later.
-                            </p>
-                        </article>
-                    </div>
+                    <!-- Project 3  --->
+                    <article class="project-card">
+                        <h3>Anthony Fantano's Weekly Track Roundup</h3>
+                        <div class="project-skills", data-skills="python,git"></div>
+                        <p class="project-description">
+                            A script that scrapes the comment sectino of Anthony Fantano's weekly track roundup videos and add's them to a youtubeMusic playlist for me to enjoy later.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/JoeCamm/weeklyRoundup" class="project-link">Source</a>
+                        </div>
+                    </article>
                 </div>
             </main>
         </div>
